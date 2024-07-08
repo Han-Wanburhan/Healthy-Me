@@ -52,7 +52,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100px;
+  width: 120px;
 }
 
 .Main-Container,
@@ -98,6 +98,29 @@ p {
   width: 20px;
   margin-left: 20px;
   color: #ff4d00;
+}
+
+.Language-Select {
+  width: 40px; /* Increased width */
+  height: 40px; /* Set height for better visibility */
+  margin-left: 10px;
+  color: #ff4d00;
+  background: none; /* Removes the background */
+  -webkit-appearance: none; /* Removes the default arrow in WebKit browsers */
+  -moz-appearance: none; /* Removes the default arrow in Firefox */
+  appearance: none; /* Removes the default arrow in other browsers */
+  border: 0px solid #ccc; /* Add border for better visibility */
+  outline: none; /* Removes the outline */
+  text-align: center; /* Centers the selected option text */
+  padding: 0;
+  position: relative; /* Required for the custom arrow */
+  background-color: white; /* Ensures background color is white */
+}
+
+/* Add padding to options for a larger dropdown */
+.Language-Select option {
+  padding: 10px; /* Adjust padding as needed */
+  text-align: center;
 }
 
 .Login-Container {

@@ -2,8 +2,20 @@ import "./Navbar.css";
 import { Logo } from "../general/general.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
+import { useTranslation } from "react-i18next";
+
+const languages = [
+  { code: "en", name: "EN" },
+  { code: "th", name: "TH" },
+];
 
 const Navbar = () => {
+  const { i18n } = useTranslation();
+  const { t } = useTranslation();
+
+  const changeLanguage = (code) => {
+    i18n.changeLanguage(code);
+  };
   return (
     <div className="Nav-Container">
       <div className="Logo-Container">
@@ -12,23 +24,42 @@ const Navbar = () => {
       <div className="Option-Container">
         <div className="Page-Container">
           <div className="Main-Container">
-            <p className="MainPage-Text">หน้าแรก</p>
+            <p className="MainPage-Text">{t("mainpage")}</p>
           </div>
           <div className="CalToDay-Container">
-            <p className="CalToDayPage-Text">แคลลอรี่ต่อวัน</p>
+            <p className="CalToDayPage-Text">{t("calpday")}</p>
           </div>
           <div className="HealtFood-Container">
-            <p className="HealtFood-Text">เมนูลดน้ำหนัก</p>
+            <p className="HealtFood-Text">{t("healthfood")}</p>
           </div>
           <div className="SaveCal-Container">
-            <p className="SaveCal-Text">บันทึกแคลลอรี่</p>
+            <p className="SaveCal-Text">{t("savecal")}</p>
           </div>
         </div>
-        <div className="Translate-Container">
-          <p className="Translate-Text">TH</p>
-        </div>
+        {/* {languages.map((lng) => (
+          <div className="Translate-Container">
+            <p
+              className={lng.code === i18n.language ? "selected" : ""}
+              key={lng.code}
+              onClick={() => changeLanguage(lng.code)}
+            >
+              {lng.name}
+            </p>
+          </div>
+        ))} */}
+        <select
+          value={i18n.language}
+          onChange={(e) => changeLanguage(e.target.value)}
+          className="Language-Select"
+        >
+          {languages.map((lng) => (
+            <option key={lng.code} value={lng.code}>
+              {lng.name}
+            </option>
+          ))}
+        </select>
         <div className="Login-Container">
-          <p className="Login-Text">เข้าสู่ระบบ</p>
+          <p className="Login-Text">{t("login")}</p>
           <FontAwesomeIcon
             icon={faRightToBracket}
             size="xl"
