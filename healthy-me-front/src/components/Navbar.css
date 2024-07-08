@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.Nav-Container {
+  width: 100%;
+  height: 64px;
+  border-bottom: 4px solid #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Logo-Container {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  margin-left: 50px;
+}
+
+.Option-Container {
+  display: flex;
+  width: 37%;
+  justify-content: space-between;
+  margin-right: 1%;
+  justify-items: center;
+  align-items: center;
+}
+
+.Page-Container {
+  width: 70%;
+  justify-content: space-between;
+}
+
+.Logo {
+  width: 163px;
+  height: 120px;
+}
+
+.Page-Container {
+  display: flex;
+}
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  font-family: "Prompt", sans-serif;
+}
+
+.Main-Container,
+.CalToDay-Container,
+.HealtFood-Container,
+.SaveCal-Container,
+.Login-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+}
+
+.Main-Container,
+.CalToDay-Container,
+.HealtFood-Container,
+.SaveCal-Container {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  text-align: center;
+}
+
+.Main-Container::after,
+.CalToDay-Container::after,
+.HealtFood-Container::after,
+.SaveCal-Container::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #66c6ba;
+  transition: width 0.3s;
+}
+
+.Main-Container:hover::after,
+.CalToDay-Container:hover::after,
+.HealtFood-Container:hover::after,
+.SaveCal-Container:hover::after {
+  width: 100%;
+}
+
+.MainPage-Text,
+.CalToDayPage-Text,
+.HealtFood-Text,
+.SaveCal-Text {
+  cursor: pointer;
+}
+
+.Translate-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  margin-left: 20px;
+  color: #ff4d00;
+}
+
+.Login-Container {
+  width: 120px;
+  height: 75%;
+  background-color: #649dad;
+  color: white;
+  justify-content: space-evenly;
+  border-radius: 5px;
+}
+.Login-Text {
+  font-size: 16px;
+  font-weight: 500;
+}
