@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.FiveFood-Container {
+  font-family: "Prompt", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.6%;
+}
+.Header-Container {
+  font-weight: "semi-bold";
+  color: #565656;
+  display: flex;
+}
+
+.Header-Container h3:nth-child(1) {
+  color: #649dad; /* เปลี่ยนสีที่ต้องการ */
+  display: flex;
+  align-items: center;
+}
+
+.Header-Container h3:nth-child(3) {
+  color: #649dad; /* เปลี่ยนสีที่ต้องการ */
+  display: flex;
+  align-items: center;
+}
+
+.FiveFood-Content {
+  display: flex;
+  margin-top: 0.8%;
+  width: 60%;
+  justify-content: space-evenly;
+}
+
+.circle-out {
+  height: 152px;
+  width: 152px;
+  border-radius: 50%;
+  display: inline-block;
+  border: #a6a6a6 solid 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.Header-Context {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.circle-in {
+  height: 134.63px;
+  width: 134.63px;
+  border-radius: 50%;
+  display: inline-block;
+  border: #a6a6a6 solid 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.context {
+  margin: 0%;
+  color: #a6a6a6;
+}
