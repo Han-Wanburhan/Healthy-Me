@@ -4,6 +4,15 @@
   width: 100%;
   justify-content: space-between;
   margin-top: 2%;
+  flex-direction: column;
+}
+
+.Topic-Conatiner2 {
+  display: flex;
+  max-width: 1340px;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 2%;
 }
 
 .Img-content {
