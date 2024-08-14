@@ -1,0 +1,51 @@
+.Footer-Container {
+  background-color: #649dad;
+  height: 160px;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.Footer-Content {
+  width: 65%;
+  display: flex;
+}
+.Social-Media {
+  width: 20%;
+}
+.Social-Media p {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.Social-Media-Icons {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: -10px;
+}
+
+.Service-Site {
+  width: 15%;
+}
+
+ul {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: white;
+}
+
+li {
+  margin-left: 13%;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.Contact-Us li {
+  font-weight: 500;
+  margin-left: 10%;
+}
