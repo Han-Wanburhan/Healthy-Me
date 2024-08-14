@@ -1,0 +1,19 @@
+.Calculate-Page-Container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.Calculate-Page-Content {
+  width: 100%;
+  max-width: 1207px;
+}
+
+.Calculate-Page-Header {
+  width: 100%;
+  border-bottom: 4px solid #aaa;
+}
+
+.StepOne-Cal-BMR-Content-Header-Radio {
+  border-bottom: 4px solid #aaa;
+}
