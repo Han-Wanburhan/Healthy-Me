@@ -1,0 +1,38 @@
+.displayCal-Container {
+  margin-top: 20px;
+  background-color: #649dad;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Prompt", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  border-radius: 5px;
+}
+
+.displayCal-Content {
+  margin-top: 5px;
+  width: 75%;
+  text-align: center;
+}
+
+.displayCal-Result {
+  height: 140px;
+  background-color: #b3d3dc;
+  border-radius: 5px;
+  margin-top: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayCal-Result :first-child {
+  font-size: 36px;
+  font-weight: 500;
+  font-family: "Prompt", sans-serif;
+}
+.displayCal-Result p {
+  color: white;
+}

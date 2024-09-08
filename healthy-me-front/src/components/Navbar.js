@@ -3,6 +3,7 @@ import { Logo } from "../general/general.js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 const languages = [
   { code: "en", name: "EN" },
@@ -24,29 +25,35 @@ const Navbar = () => {
       <div className="Option-Container">
         <div className="Page-Container">
           <div className="Main-Container">
-            <p className="MainPage-Text">{t("mainpage")}</p>
+            <Link style={{ textDecoration: "none", color: "#565656" }} to="/">
+              <p className="MainPage-Text">{t("mainpage")}</p>
+            </Link>
           </div>
           <div className="CalToDay-Container">
-            <p className="CalToDayPage-Text">{t("calpday")}</p>
+            <Link
+              style={{ textDecoration: "none", color: "#565656" }}
+              to="/calculate"
+            >
+              <p className="CalToDayPage-Text">{t("calpday")}</p>
+            </Link>
           </div>
           <div className="HealtFood-Container">
-            <p className="HealtFood-Text">{t("healthfood")}</p>
+            <Link
+              style={{ textDecoration: "none", color: "#565656" }}
+              to="/healtfood"
+            >
+              <p className="HealtFood-Text">{t("healthfood")}</p>
+            </Link>
           </div>
           <div className="SaveCal-Container">
-            <p className="SaveCal-Text">{t("savecal")}</p>
+            <Link
+              style={{ textDecoration: "none", color: "#565656" }}
+              to="/savecal"
+            >
+              <p className="SaveCal-Text">{t("savecal")}</p>
+            </Link>
           </div>
         </div>
-        {/* {languages.map((lng) => (
-          <div className="Translate-Container">
-            <p
-              className={lng.code === i18n.language ? "selected" : ""}
-              key={lng.code}
-              onClick={() => changeLanguage(lng.code)}
-            >
-              {lng.name}
-            </p>
-          </div>
-        ))} */}
         <select
           value={i18n.language}
           onChange={(e) => changeLanguage(e.target.value)}

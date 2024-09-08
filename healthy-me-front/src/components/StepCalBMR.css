@@ -1,0 +1,38 @@
+.StepOne-Cal-BMR-Header :first-child {
+  color: #649dad;
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Prompt", sans-serif;
+  margin: 5px 0% 0% 0%;
+}
+
+.StepOne-Cal-BMR-Header :nth-child(2) {
+  color: #565656;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Prompt", sans-serif;
+  margin: 0% 0% 0% 0%;
+}
+
+.StepOne-Cal-BMR-Container {
+  display: flex;
+  justify-content: center;
+}
+.StepOne-Cal-BMR-Content {
+  background-color: #f8f8f8;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.StepOne-Cal-BMR-Content-Header {
+  width: 75%;
+}
+
+.StepOne-Cal-BMR-Content-Header p {
+  color: #649dad;
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Prompt", sans-serif;
+  margin: 0% 0% 0% 0%;
+}

@@ -1,0 +1,21 @@
+.Input-Container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Prompt", sans-serif;
+}
+
+label {
+  font-size: 18px;
+  margin-bottom: 2px;
+  font-weight: 600;
+  margin-top: 5px;
+  color: #649dad;
+}
+
+input {
+  height: 34px;
+  border: #649dad solid 2px;
+  text-indent: 2px;
+  font-size: 18px;
+  font-weight: 400;
+}

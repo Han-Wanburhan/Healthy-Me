@@ -1,0 +1,35 @@
+.Cal-BT {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Cal-BT button {
+  width: 100%;
+  background-color: #649dad;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+}
+
+.Cal-BT button p {
+  color: white;
+}
+
+.inbt {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.licon1 {
+  width: 53%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.licon2 {
+  width: 45%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}

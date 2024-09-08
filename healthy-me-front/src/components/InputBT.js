@@ -1,6 +1,12 @@
 import "./InputBT.css";
-const InputBT = () => {
-  return <input type="text" placeholder="น้ำหนัก" />;
+const InputBT = ({ text, placeholder, value, onChange }) => {
+  // console.log(value, ":", onChange);
+  return (
+    <div className="Input-Container">
+      <label>{text}</label>
+      <input placeholder={placeholder} value={value} onChange={onChange} />
+    </div>
+  );
 };
 
 export default InputBT;

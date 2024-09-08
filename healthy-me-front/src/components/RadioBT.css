@@ -1,3 +1,29 @@
 .StepOne-Cal-BMR-Content-Radio {
   display: flex;
+  justify-content: center;
+  padding-bottom: 2%;
+  border-bottom: 2px solid #aaa;
+}
+
+.imageradio {
+  width: 108px;
+  height: 108px;
+}
+
+.menorwomen {
+  width: 120px;
+  height: 195px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.StepOne-Cal-BMR-Content-Radio-Setter {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+.menorwomen p {
+  color: black;
 }

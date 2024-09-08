@@ -5,8 +5,8 @@
 }
 
 .Calculate-Page-Content {
-  width: 100%;
-  max-width: 1207px;
+  width: 80%;
+  max-width: 1150px;
 }
 
 .Calculate-Page-Header {
@@ -16,4 +16,13 @@
 
 .StepOne-Cal-BMR-Content-Header-Radio {
   border-bottom: 4px solid #aaa;
+}
+
+.Calculate-Page-Header p {
+  color: #649dad;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: "Prompt", sans-serif;
+  margin-bottom: 0%;
+  /* letter-spacing: 1px; */
 }
