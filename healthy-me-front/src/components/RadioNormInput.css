@@ -1,0 +1,21 @@
+.RadioNormInput-Content {
+  width: 100%;
+  border: #649dad solid 2px;
+  height: 55px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.RadioNormInput-Content input {
+  /* display: none; */
+}
+
+.RadioNormInput-Content label {
+  width: 96%;
+  font-family: "Prompt", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #565656;
+}

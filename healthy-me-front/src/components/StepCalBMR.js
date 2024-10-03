@@ -29,8 +29,8 @@ const StepCalBMR = ({
   };
 
   return (
-    <div className="StepOne-Cal-BMR">
-      <div className="StepOne-Cal-BMR-Header">
+    <div className="Step-Cal">
+      <div className="Step-Cal-Header">
         <p>Step 1 : คำนวณค่า BMR</p>
         <p>
           (Basal Metabolic Rate) คือ
@@ -38,15 +38,15 @@ const StepCalBMR = ({
           หรือจำนวนแคลอรี่ขั้นต่ำที่ต้องการใช้ในชีวิตแต่ละวัน
         </p>
       </div>
-      <div className="StepOne-Cal-BMR-Container">
-        <div className="StepOne-Cal-BMR-Content">
-          <div className="StepOne-Cal-BMR-Content-Header">
+      <div className="Step-Cal-Container">
+        <div className="Step-Cal-Content">
+          <div className="Step-Cal-Content-Header">
             <p>เพศ</p>
             <RadioBT
               selected={selected}
               handleSelectGender={handleSelectGender}
             />
-            <div className="StepOne-Cal-BMR-Content-Input">
+            <div className="Step-Cal-Content-Input">
               <InputBT
                 text={"น้ำหนัก (kg.)"}
                 type={"number"}
@@ -65,7 +65,7 @@ const StepCalBMR = ({
                 value={age}
                 onChange={(e) => handleInputChange(e, "age")}
               />
-              <Cal_BT Text={"คำนวน"} calculateBMR={calculateBMR} />
+              <Cal_BT Text={"คำนวน"} calculate={calculateBMR} />
               <DisplayCal Header={"BMR (Kcal)"} CalNum={bmr_cal} />
             </div>
           </div>
