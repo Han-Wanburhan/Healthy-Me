@@ -1,0 +1,22 @@
+.SideBar-SType,
+.SideBar-HMake {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 4px solid #aaa;
+}
+.SideBar-Title {
+  margin: 5px 0% 2px 0%;
+}
+.Rap-Col {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.Rap-Col label {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: "Prompt", sans-serif;
+  color: #565656;
+  margin-left: 5px;
+}

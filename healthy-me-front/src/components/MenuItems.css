@@ -1,0 +1,21 @@
+.MenuItems-Content {
+  width: 60%;
+}
+.MenuItems-Header-Container {
+  font-weight: "semi-bold";
+  color: #565656;
+  display: flex;
+  justify-content: center;
+}
+
+.MenuItems-Header-Container h3:nth-child(1) {
+  color: #649dad;
+  display: flex;
+  align-items: center;
+}
+
+.MenuItems-Header-Container h3:nth-child(3) {
+  color: #649dad;
+  display: flex;
+  align-items: center;
+}
