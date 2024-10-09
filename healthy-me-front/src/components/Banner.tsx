@@ -5,7 +5,7 @@ const delay = 2500;
 const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const Banner = () => {
   const [index, setIndex] = useState(0);
-  const timeoutRef = useRef(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   function resetTimeout() {
     if (timeoutRef.current) {

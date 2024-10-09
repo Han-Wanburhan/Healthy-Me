@@ -1,5 +1,14 @@
+import React from "react";
 import "./MenuItem.css";
-const MenuItem = ({ menuItem }) => {
+
+interface MenuItemProps {
+  menuItem: {
+    img: string;
+    title: string;
+    context: string;
+  }[];
+}
+const MenuItem: React.FC<MenuItemProps> = ({ menuItem }) => {
   return (
     <div className="MenuItem-Container">
       {menuItem.map((item) => (

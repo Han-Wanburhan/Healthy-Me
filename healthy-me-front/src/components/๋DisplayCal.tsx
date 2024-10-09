@@ -1,14 +1,19 @@
 import "./๋DisplayCal.css";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
-const DisplayCal = ({ Header, CalNum }) => {
+interface DisplayCalProps {
+  Header: string;
+  CalNum: number;
+}
+
+const DisplayCal: React.FC<DisplayCalProps> = ({ Header, CalNum }) => {
   const [displayedNum, setDisplayedNum] = useState(0);
 
   // Set Number Animation
   useEffect(() => {
-    let startTime = null;
+    let startTime: number | null = null;
     const duration = 1000; // Time of animation
-    const animate = (currentTime) => {
+    const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
 
       const progress = currentTime - startTime;

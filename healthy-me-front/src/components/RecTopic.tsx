@@ -2,7 +2,14 @@ import "./RecTopic.css";
 import testimg from "../image/Logo-removebg-preview.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
-export const RecTopic = ({ jason_context }) => {
+import React from "react";
+interface RecTopicProps {
+  jason_context: {
+    Header: string;
+    Content: string;
+  }[];
+}
+export const RecTopic: React.FC<RecTopicProps> = ({ jason_context }) => {
   return (
     <div className="Topic-Conatiner">
       {jason_context.map((item, index) => (
@@ -13,7 +20,7 @@ export const RecTopic = ({ jason_context }) => {
           <div className="Topic-Content">
             <p className="Topic-Header-Context">{item.Header}</p>
             <p className="Topic-Preview-Context">{item.Content}</p>
-            <button className="Topic-MoreView">
+            <button className="Topic-MoreView" type="button">
               อ่านเพิ่มเติม <FontAwesomeIcon icon={faCircleChevronRight} />
             </button>
           </div>

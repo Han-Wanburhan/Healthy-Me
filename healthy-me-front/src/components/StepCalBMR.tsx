@@ -4,20 +4,39 @@ import InputBT from "./InputBT";
 import Cal_BT from "./Cal-BT";
 import DisplayCal from "./๋DisplayCal";
 
-const StepCalBMR = ({
+interface StepCalBMRProps {
+  bmr_cal: number;
+  weight: number;
+  height: number;
+  age: number;
+  selected: string | null;
+  setBmr_cal: React.Dispatch<React.SetStateAction<number>>;
+  setWeight: React.Dispatch<React.SetStateAction<number>>;
+  setHeight: React.Dispatch<React.SetStateAction<number>>;
+  setAge: React.Dispatch<React.SetStateAction<number>>;
+  setSelected: React.Dispatch<React.SetStateAction<string | null>>;
+  handleSelectGender: (value: string) => void;
+  calculateBMR: () => void;
+}
+
+const StepCalBMR: React.FC<StepCalBMRProps> = ({
   bmr_cal,
   weight,
   height,
   age,
+  selected,
   setBmr_cal,
   setWeight,
   setHeight,
   setAge,
-  selected,
+  setSelected,
   handleSelectGender,
   calculateBMR,
 }) => {
-  const handleInputChange = (e, type) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    type: string
+  ) => {
     const value = parseFloat(e.target.value);
     if (type === "weight") {
       setWeight(value);
@@ -49,19 +68,19 @@ const StepCalBMR = ({
             <div className="Step-Cal-Content-Input">
               <InputBT
                 text={"น้ำหนัก (kg.)"}
-                type={"number"}
+                placeholder={"number"}
                 value={weight}
                 onChange={(e) => handleInputChange(e, "weight")}
               />
               <InputBT
                 text={"ส่วนสูง (cm.)"}
-                type={"number"}
+                placeholder={"number"}
                 value={height}
                 onChange={(e) => handleInputChange(e, "height")}
               />
               <InputBT
                 text={"อายุ (ปี)"}
-                type={"number"}
+                placeholder={"number"}
                 value={age}
                 onChange={(e) => handleInputChange(e, "age")}
               />

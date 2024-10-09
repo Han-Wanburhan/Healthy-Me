@@ -1,7 +1,16 @@
 import InputBT from "./InputBT";
 import Cal_BT from "./Cal-BT";
 import DisplayCal from "./๋DisplayCal";
-const StepCalTarget = ({
+import React from "react";
+interface StepCalTargetProps {
+  target: number;
+  day: number;
+  setTarget: React.Dispatch<React.SetStateAction<number>>;
+  setDay: React.Dispatch<React.SetStateAction<number>>;
+  calculate_target_day: () => void;
+  finalcal_target: number;
+}
+const StepCalTarget: React.FC<StepCalTargetProps> = ({
   target,
   day,
   setTarget,
@@ -9,8 +18,11 @@ const StepCalTarget = ({
   calculate_target_day,
   finalcal_target,
 }) => {
-  const handleInputChange = (e, type) => {
-    const value = parseFloat(e.target.value);
+  const handleInputChange = (
+    event: React.ChangeEvent<HTMLInputElement>,
+    type: string
+  ) => {
+    const value = parseFloat(event.target.value);
     if (type === "target") {
       setTarget(value);
     } else if (type === "day") {
@@ -31,14 +43,14 @@ const StepCalTarget = ({
           <div className="Step-Cal-Content-Header">
             <InputBT
               text={"เป้าหมาย : น้ำหนักที่ต้องการ"}
-              type={"number"}
+              placeholder={"number"}
               value={target}
               onChange={(e) => handleInputChange(e, "target")}
             />
             <InputBT
               text={"จำนวนวัน"}
-              type={"number"}
-              //   value={day}
+              placeholder={"number"}
+              value={day}
               onChange={(e) => handleInputChange(e, "day")}
             />
 

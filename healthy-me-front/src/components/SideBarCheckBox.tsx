@@ -1,8 +1,12 @@
 import "./SideBarCheckBox.css";
-import { useState, useEffect } from "react";
-const SideBarCheckBox = ({ title, list }) => {
-  const [selected, setSelected] = useState([]);
-  const handleCheckboxChange = (event) => {
+import React, { useState, useEffect } from "react";
+interface SideBarCheckBoxProps {
+  title: string;
+  list: string[];
+}
+const SideBarCheckBox: React.FC<SideBarCheckBoxProps> = ({ title, list }) => {
+  const [selected, setSelected] = useState<string[]>([]);
+  const handleCheckboxChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value, checked } = event.target;
     if (checked) {
       setSelected((prevSelected) => [...prevSelected, value]);

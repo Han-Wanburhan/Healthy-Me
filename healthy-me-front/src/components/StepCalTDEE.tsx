@@ -1,7 +1,19 @@
 import RadioNormInput from "./RadioNormInput";
 import Cal_BT from "./Cal-BT";
 import DisplayCal from "./๋DisplayCal";
-const StepCalTDEE = ({ handleSelectOption, calculateTDEE, tdee_cal }) => {
+import React from "react";
+
+interface StepCalTDEEProps {
+  handleSelectOption: (e: React.ChangeEvent<HTMLInputElement>) => void; // Changed to HTMLInputElement
+  calculateTDEE: () => void;
+  tdee_cal: number;
+}
+
+const StepCalTDEE: React.FC<StepCalTDEEProps> = ({
+  handleSelectOption,
+  calculateTDEE,
+  tdee_cal,
+}) => {
   return (
     <div className="Step-Cal">
       <div className="Step-Cal-Header">
@@ -21,39 +33,35 @@ const StepCalTDEE = ({ handleSelectOption, calculateTDEE, tdee_cal }) => {
                 forop={"option1"}
                 label={"นั่งทำงานอยู่กับที่ และไม่ได้ออกกำลังกายเลย"}
                 value={"option1"}
-                onChange={(e) => handleSelectOption(e)}
+                onChange={handleSelectOption} // No wrapping needed
               />
               <RadioNormInput
                 forop={"option2"}
                 label={
-                  " ออกกำลังกายหรือเล่นกีฬาเล็กน้อย ประมาณอาทิตย์ละ 1-3 วัน"
+                  "ออกกำลังกายหรือเล่นกีฬาเล็กน้อย ประมาณอาทิตย์ละ 1-3 วัน"
                 }
                 value={"option2"}
-                onChange={(e) => handleSelectOption(e)}
+                onChange={handleSelectOption}
               />
               <RadioNormInput
                 forop={"option3"}
-                label={
-                  " ออกกำลังกายหรือเล่นกีฬาปานกลาง ประมาณอาทิตย์ละ 3-5 วัน"
-                }
+                label={"ออกกำลังกายหรือเล่นกีฬาปานกลาง ประมาณอาทิตย์ละ 3-5 วัน"}
                 value={"option3"}
-                onChange={(e) => handleSelectOption(e)}
+                onChange={handleSelectOption}
               />
               <RadioNormInput
                 forop={"option4"}
                 label={
-                  " ออกกำลังกายหรือเล่นกีฬาอย่างหนัก ประมาณอาทิตย์ละ 6-7 วัน"
+                  "ออกกำลังกายหรือเล่นกีฬาอย่างหนัก ประมาณอาทิตย์ละ 6-7 วัน"
                 }
                 value={"option4"}
-                onChange={(e) => handleSelectOption(e)}
+                onChange={handleSelectOption}
               />
               <RadioNormInput
                 forop={"option5"}
-                label={
-                  " ออกกำลังกายหรือเล่นกีฬาอย่างหนักมาก ทุกวันเช้า และเย็น"
-                }
+                label={"ออกกำลังกายหรือเล่นกีฬาอย่างหนักมาก ทุกวันเช้า และเย็น"}
                 value={"option5"}
-                onChange={(e) => handleSelectOption(e)}
+                onChange={handleSelectOption}
               />
             </div>
             <Cal_BT Text={"คำนวน"} calculate={calculateTDEE} />
@@ -64,4 +72,5 @@ const StepCalTDEE = ({ handleSelectOption, calculateTDEE, tdee_cal }) => {
     </div>
   );
 };
+
 export default StepCalTDEE;

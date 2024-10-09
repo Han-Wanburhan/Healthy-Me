@@ -10,19 +10,19 @@ const CalculatePage = () => {
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
   const [age, setAge] = useState(0);
-  const [selected, setSelected] = useState(null);
-  const [option, setOption] = useState(null);
+  const [selected, setSelected] = useState<string | null>(null);
+  const [option, setOption] = useState<string | null>(null);
   const [tdee_cal, setTdee_cal] = useState(0);
   const [target, setTarget] = useState(0);
   const [day, setDay] = useState(0);
   const [finalcal_target, setFinalcal_target] = useState(0);
 
-  const handleSelectGender = (value) => {
+  const handleSelectGender = (value: string) => {
     setSelected(value);
   };
 
-  const handleSelectOption = (value) => {
-    setOption(value.target.value);
+  const handleSelectOption = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setOption(event.target.value);
   };
 
   const calculateBMR = () => {

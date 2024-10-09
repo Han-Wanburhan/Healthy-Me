@@ -14,7 +14,7 @@ const Navbar = () => {
   const { i18n } = useTranslation();
   const { t } = useTranslation();
 
-  const changeLanguage = (code) => {
+  const changeLanguage = (code: string) => {
     i18n.changeLanguage(code);
   };
   return (
@@ -58,6 +58,7 @@ const Navbar = () => {
           value={i18n.language}
           onChange={(e) => changeLanguage(e.target.value)}
           className="Language-Select"
+          aria-label="Select Language"
         >
           {languages.map((lng) => (
             <option key={lng.code} value={lng.code}>

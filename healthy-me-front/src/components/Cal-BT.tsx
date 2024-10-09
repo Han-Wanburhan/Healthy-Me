@@ -1,8 +1,13 @@
 import "./Cal-BT.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleChevronRight } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
 
-const Cal_BT = ({ Text, calculate }) => {
+interface Cal_BTProps {
+  Text: string;
+  calculate: () => void;
+}
+const Cal_BT: React.FC<Cal_BTProps> = ({ Text, calculate }) => {
   return (
     <div className="Cal-BT">
       <button onClick={calculate}>
