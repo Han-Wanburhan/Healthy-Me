@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import SideBarHealt from "../components/SideBar_Healtfood";
 import MenuItems from "../components/MenuItems";
 import "./Healtfood-Page.css";
+import { Footer } from "../components/Footer";
 
 const HealthfoodPage = () => {
   return (
@@ -13,6 +14,7 @@ const HealthfoodPage = () => {
         <SideBarHealt />
         <MenuItems />
       </div>
+      <Footer />
     </div>
   );
 };

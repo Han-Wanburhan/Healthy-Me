@@ -1,0 +1,64 @@
+.SavecalPage-Container {
+}
+
+.SavecalPage-Content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2%;
+}
+
+.Graph-Header {
+  width: 20%;
+}
+
+.Graph-Header-Content {
+  width: 100%;
+  height: 300px;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Graph-Header-Content h1 {
+  color: #d9d9d9;
+}
+
+.SavecalPage-Body-Container {
+  width: 80%;
+  min-height: 600px;
+  max-height: 1200px;
+  background-color: #f8f8f8;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+}
+
+.SavecalPage-Body-Content {
+  width: 95%;
+  margin-top: 2%;
+}
+.SavecalPage-Body-Content-Date input[type="date"] {
+  background-color: #ffffff; /* Example style */
+  border-radius: 5px;
+  border: 2px solid #898989;
+  padding: 10px;
+}
+.SavecalPage-Body-Content-List {
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+.SavecalPage-Body-Content-List button {
+  background-color: #ffffff;
+  margin-top: 5%;
+  width: 165px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: larger;
+  font-weight: 600;
+  border: 2px solid;
+  cursor: pointer;
+}
