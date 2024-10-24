@@ -145,7 +145,7 @@ const SaveCalPage: React.FC = () => {
                     type="button"
                     onClick={handleClickAddFoodBT}
                   >
-                    เพิ่มอาหาร เพิ่มอาหาร
+                    เพิ่มอาหาร
                   </button>
                 </div>
               </div>
