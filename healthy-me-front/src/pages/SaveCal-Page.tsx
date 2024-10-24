@@ -5,6 +5,7 @@ import "./SaveCal-Page.css";
 import { Doughnut } from "react-chartjs-2";
 import ChartDataLabels from "chartjs-plugin-datalabels";
 import { ArcElement, Tooltip, Legend, Chart as ChartJS } from "chart.js";
+import { useEffect, useState } from "react"; // Import useEffect to set the date
 
 // Registering plugins
 ChartJS.register(ArcElement, Tooltip, Legend, ChartDataLabels);
@@ -38,16 +39,15 @@ const SaveCalPage: React.FC = () => {
   //     cutout: "60%",
   //   },
   // ];
-
   const data: DataItem[] = [];
 
-  // Define the type for chart options
+  const [haveData, setHaveData] = useState<boolean>(false);
   const options: any = {
     plugins: {
       datalabels: {
         formatter: (value: number) => {
           let val = Math.round(value);
-          return new Intl.NumberFormat("tr-TR").format(val); // For number format
+          return new Intl.NumberFormat("tr-TR").format(val);
         },
         color: "white",
         font: {
@@ -57,7 +57,7 @@ const SaveCalPage: React.FC = () => {
         },
       },
       legend: {
-        position: "right", // Move labels to the left
+        position: "right",
         labels: {
           font: {
             family: "Poppins",
@@ -88,6 +88,21 @@ const SaveCalPage: React.FC = () => {
     ],
   };
 
+  useEffect(() => {
+    const today = new Date().toISOString().split("T")[0];
+    const dateInput = document.getElementById("date") as HTMLInputElement;
+    if (dateInput) {
+      dateInput.value = today;
+    }
+  }, []);
+
+  const handleClickAddFoodBT = () => {
+    setHaveData(true);
+  };
+  // const toggleHaveData = () => {
+  //   setHaveData((prev) => !prev); // สลับค่า true/false
+  // };
+
   return (
     <div>
       <Navbar />
@@ -103,16 +118,39 @@ const SaveCalPage: React.FC = () => {
             )}
           </div>
           <div className="SavecalPage-Body-Container">
-            <div className="SavecalPage-Body-Content">
-              <div className="SavecalPage-Body-Content-Date">
-                <input type="date" placeholder="dd/mm/yyyy" />
+            {haveData ? (
+              <div className="SavecalPage-Body-Content">
+                <div className="SavecalPage-Body-Content-Date">
+                  <input id="date" type="date" placeholder="dd/mm/yyyy" />
+                  <button
+                    id="AddFood-BT-HaveData"
+                    title="Add Meal"
+                    type="button"
+                    onClick={handleClickAddFoodBT}
+                  >
+                    เพิ่มอาหาร
+                  </button>
+                </div>
+                <div className="SavecalPage-Body-Content-List"></div>
               </div>
-              <div className="SavecalPage-Body-Content-List">
-                <button title="Add Meal" type="button">
-                  เพิ่มอาหาร
-                </button>
+            ) : (
+              <div className="SavecalPage-Body-Content">
+                <div className="SavecalPage-Body-Content-Date">
+                  <input id="date" type="date" placeholder="dd/mm/yyyy" />
+                </div>
+                <div className="SavecalPage-Body-Content-List">
+                  <button
+                    id="AddFood-BT"
+                    title="Add Meal"
+                    type="button"
+                    onClick={handleClickAddFoodBT}
+                  >
+                    เพิ่มอาหาร
+                    เพิ่มอาหาร
+                  </button>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
       </div>
